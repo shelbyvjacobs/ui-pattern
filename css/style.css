@@ -75,7 +75,7 @@ header {
 	transition: 0.3s;
 }
 
-.close:hover {
+.close:hover, .close:focus {
 	color: grey;
 	cursor: pointer;
 }
