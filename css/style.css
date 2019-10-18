@@ -46,10 +46,70 @@ header {
 	padding: 20px;
 	margin: auto;
 }
-
+/*
 .photo {
 	background-image: url("../images/tempArt.jpg");
 	background-size: cover;
+}*/
+
+#art1 {
+	width: 100%;
+	object-fit: cover; /*fix this so images are responsive*/
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#art1:hover {
+	opacity: 0.7;
+}
+
+/*the modal (background)*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+}
+
+/*modal content (image)*/
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+/*close button for modal*/
+.close { 
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover {
+	color: grey;
+	cursor: pointer;
+}
+
+.apod1, .apod2, .apod3, .apod4, .apod5, .apod6 {
+	width: 100%;
 }
 
 /*row 1*/
