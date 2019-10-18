@@ -35,34 +35,6 @@ header {
 	grid-column: 2, span 1;*/
 }
 
-.main {
-	width: 80%;
-	background-color: #171717;
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr;
-	margin: auto;
-	margin: 50px;
-	padding: 20px;
-	margin: auto;
-}
-/*
-.photo {
-	background-image: url("../images/tempArt.jpg");
-	background-size: cover;
-}*/
-
-#art1 {
-	width: 100%;
-	object-fit: cover; /*fix this so images are responsive*/
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-#art1:hover {
-	opacity: 0.7;
-}
-
 /*the modal (background)*/
 .modal {
 	display: none;
@@ -108,16 +80,30 @@ header {
 	cursor: pointer;
 }
 
-.apod1, .apod2, .apod3, .apod4, .apod5, .apod6 {
+.apod1 {
 	width: 100%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#apod1:hover { /*not quite working*/
+	opacity: 0.9;
+}
+
+.main {
+	width: 80%;
+	background-color: #171717;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+	margin: auto;
+	padding: 20px;
 }
 
 /*row 1*/
 	.photo1 {
 		grid-row: 1, span 1;
 		grid-column: 1, span 1;
-		/*background-image: relative;*/
-		/*background - make sure it's set to fill, but stays proportional*/
 	}
 
 	.description1 {
@@ -126,71 +112,35 @@ header {
 		background-color: white;
 		padding: 15px;
 	}
-/*row 2*/
-	.description2 {
-		grid-row: 2, span 1;
-		grid-column: 1, span 1;
-		background-color: white;
-		padding: 15px;
-	}
 
-	.photo2 {
-		grid-row: 2, span 1;
-		grid-column: 2, span 1;
-		/*background-image: relative;*/
-	}
-/*row 3*/
-	.photo3 {
-		grid-row: 3, span 1;
-		grid-column: 1, span 1;
-		/*background-image: relative;*/
-	}
+.accordian {
+	text-align: center;
+	background-color: white; 
+	color: black;
+	cursor: pointer;
+	padding: 20px;
+	width: 80%;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+}
 
-	.description3 {
-		grid-row: 3, span 1;
-		grid-column: 2, span 1;
-		background-color: white;
-		padding: 15px;
-	}
-/*row 4*/
-	.description4 {
-		grid-row: 4, span 1;
-		grid-column: 1, span 1;
-		background-color: white;
-		padding: 15px;
-	}
+.active, .accordian:hover {
+	background-color: #34eb98;
+}
 
-	.photo4 {
-		grid-row: 4, span 1;
-		grid-column: 2, span 1;
-		/*background-image: relative;*/
-	}
-/*row 5*/
-	.photo5 {
-		grid-row: 5, span 1;
-		grid-column: 1, span 1;
-		/*background-image: relative;*/
-	}
-
-	.description5 {
-		grid-row: 5, span 1;
-		grid-column: 2, span 1;
-		background-color: white;
-		padding: 15px;
-	}
-/*row 6*/
-	.description6 {
-		grid-row: 6, span 1;
-		grid-column: 1, span 1;
-		background-color: white;
-		padding: 15px;
-	}
-
-	.photo6 {
-		grid-row: 6, span 1;
-		grid-column: 2, span 1;
-		/*background-image: relative;*/
-	}
+/*.accordian, .panel {
+	margin: auto;
+	width: 80%;
+}*/
+.panel {
+	padding: 20px;
+	background-color: white;
+	display: none;
+	overflow: hidden;
+	width: 80%;
+	margin: auto;
+}
 
 footer {
 /*	display: inline, flex;
@@ -198,9 +148,6 @@ footer {
 	justify-content: space-around;*/
 	background-color: #34eb98;
 	color: white;
-	/*position: fixed;
-  	left: 0;
-  	bottom: 0;*/
   	width: 100%;
   	height: 100px;
 }
