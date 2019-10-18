@@ -9,6 +9,7 @@ const modal = document.querySelector("#modal1")
 const modalImg = document.querySelector("#modalImg1")
 const photoDiv1 = document.querySelector(".photo1")
 
+
 // fetch a different photo for each div; can I do this all in one fetch?
 // apod 1
 	fetch(url)
@@ -16,10 +17,10 @@ const photoDiv1 = document.querySelector(".photo1")
 		.then(res => {
 			// console.log(res)
 			// console.log(res.hdurl)
-			let photo = document.createElement("IMG");
-			photo.setAttribute ("src", res.hdurl);
-			photo.setAttribute ("class", "apod1")
-			photoDiv1.appendChild(photo)
+			let photo1 = document.createElement("IMG");
+			photo1.setAttribute ("src", res.hdurl);
+			photo1.setAttribute ("class", "apod1")
+			photoDiv1.appendChild(photo1)
 		})
 		.catch(err => console.log("err", err))
 
