@@ -92,7 +92,7 @@ header {
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 50px 20px 20px 20px;
 }
 	.photo1 {
 		grid-row: 1, span 1;
@@ -104,6 +104,7 @@ header {
 		grid-column: 2, span 1;
 		background-color: white;
 		padding: 15px;
+		border-radius: 0px 15px 15px 0px;
 	}
 
 .photoTitle {
@@ -145,12 +146,13 @@ header {
 }
 
 .panel {
-	padding: 20px;
+	padding: 0 20px;
 	background-color: white;
-	display: none;
-	overflow: hidden;
 	width: 70%;
 	margin: auto;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
 }
 
 footer {
