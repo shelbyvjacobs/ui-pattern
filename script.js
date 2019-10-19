@@ -7,6 +7,7 @@ const modalImg = document.querySelector("#modalImg1")
 const photoDiv1 = document.querySelector(".photo1")
 const closeButton = document.querySelectorAll(".close")[0];
 const accordian = document.querySelector(".accordian")
+const panel = document.querySelector(".panel");
 let i = 0;
 
 //apod
@@ -15,22 +16,25 @@ fetch(url)
 	.then(res => {
 		let photo1 = document.createElement("IMG");
 			photo1.setAttribute ("src", res.hdurl);
-			photo1.setAttribute ("class", "apod1")
-			photoDiv1.appendChild(photo1)
+			photo1.setAttribute ("class", "apod1");
+			photoDiv1.appendChild(photo1);
 		//title
 		let title = document.createElement("H2");
 			title.innerText = res.title;
 			descriptionDiv.appendChild(title);
 		//date
 		let date = document.createElement("P");
-			date.setAttribute ("class", "date")
+			date.setAttribute ("class", "date");
 			date.innerText = res.date;
-			// console.log(date);
 			descriptionDiv.appendChild(date);
+		//explanation
+		let explanation = document.createElement("P");
+			explanation.innerText = res.explanation;
+			panel.appendChild(explanation);
 		//modal
 		photo[i].addEventListener("click", function(evt){
 			evt.preventDefault();
-			console.log("photo clicked!")
+			console.log("photo clicked!");
 			modal.style.display = "block";
 			modalImg.src = res.hdurl;
 		})
