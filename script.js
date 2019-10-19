@@ -18,15 +18,16 @@ fetch(url)
 			photo1.setAttribute ("src", res.hdurl);
 			photo1.setAttribute ("class", "apod1");
 			photoDiv1.appendChild(photo1);
-		//title
-		let title = document.createElement("H2");
-			title.innerText = res.title;
-			descriptionDiv.appendChild(title);
 		//date
 		let date = document.createElement("P");
 			date.setAttribute ("class", "date");
 			date.innerText = res.date;
 			descriptionDiv.appendChild(date);
+		//title
+		let title = document.createElement("H2");
+			title.setAttribute ("class", "photoTitle");
+			title.innerText = res.title;
+			descriptionDiv.appendChild(title);
 		//explanation
 		let explanation = document.createElement("P");
 			explanation.innerText = res.explanation;
