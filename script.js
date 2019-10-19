@@ -1,7 +1,7 @@
 const url = "https://api.nasa.gov/planetary/apod?api_key=yq5ylhafGMwftv9B8A0E753s7LXQeo9TBCh4N0Q3";
 
 const photo = document.querySelectorAll(".photo");
-const descriptionDiv = document.querySelectorAll(".desc")
+const descriptionDiv = document.querySelector(".desc")
 const modal = document.querySelector("#modal1")
 const modalImg = document.querySelector("#modalImg1")
 const photoDiv1 = document.querySelector(".photo1")
@@ -17,6 +17,16 @@ fetch(url)
 			photo1.setAttribute ("src", res.hdurl);
 			photo1.setAttribute ("class", "apod1")
 			photoDiv1.appendChild(photo1)
+		//title
+		let title = document.createElement("H2");
+			title.innerText = res.title;
+			descriptionDiv.appendChild(title);
+		//date
+		let date = document.createElement("P");
+			date.setAttribute ("class", "date")
+			date.innerText = res.date;
+			// console.log(date);
+			descriptionDiv.appendChild(date);
 		//modal
 		photo[i].addEventListener("click", function(evt){
 			evt.preventDefault();

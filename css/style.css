@@ -10,20 +10,13 @@ header {
 	background-color: #34eb98;
 	height: 100px;
 	color: white;
-/*	display: grid;*/
-/*	grid-template-rows: 100%;
-	grid-template-columns: 75% 25%;*/
 }
-
-/*why aren't grid or flex working?!*/
 
 .title {
 	font-family: 'Montserrat Subrayada', sans-serif;
 	font-size: 45px;
 	color: white;
 	padding: 25px;
-/*	grid-row: 1, span 1;
-	grid-column: 1, span 1;*/
 	text-align: center;
 }
 
@@ -31,8 +24,6 @@ header {
 	max-width: 50%;
 	height: auto;
 	padding: 15px;
-/*	grid-row: 1, span 1;
-	grid-column: 2, span 1;*/
 }
 
 /*the modal (background)*/
@@ -129,10 +120,6 @@ header {
 	background-color: #34eb98;
 }
 
-/*.accordian, .panel {
-	margin: auto;
-	width: 80%;
-}*/
 .panel {
 	padding: 20px;
 	background-color: white;
@@ -142,6 +129,7 @@ header {
 	margin: auto;
 }
 
+/*why isn't the flexbox working?*/
 footer {
 /*	display: inline, flex;
 	flex-direction: row;
