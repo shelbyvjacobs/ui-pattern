@@ -15,10 +15,18 @@ fetch(url)
 	.then(res => res.json())
 	.then(res => {
 		//photo
+		if (res.media_type = "video"){
+		let video1 = document.createElement("iframe");
+			video1.setAttribute ("src", res.url);
+			video1.setAttribute ("class", "apod1");
+			video1.setAttribute ("height", "400px");
+			photoDiv1.appendChild(video1);
+		} else {
 		let photo1 = document.createElement("IMG");
 			photo1.setAttribute ("src", res.hdurl);
 			photo1.setAttribute ("class", "apod1");
 			photoDiv1.appendChild(photo1);
+		}
 		//date
 		let date = document.createElement("P");
 			date.setAttribute ("class", "date");
@@ -38,7 +46,7 @@ fetch(url)
 			evt.preventDefault();
 			console.log("photo clicked!");
 			modal.style.display = "block";
-			modalImg.src = res.hdurl;
+			modalImg.src = res.url;
 		})
 	})
 	.catch(err => console.log("err", err))
