@@ -10,6 +10,10 @@ My goals for this project included:
 * Connect to an API and fetch information to populate the page.
 * Utilize UI patterns for and interactive user experience.
 
+Future goals:
+* Make the website fully responsive, especially the mobile version.
+* Improve code so that YouTube videos can be opened in the modal.
+
 ### Example
 
 Below is a screenshot of the default page.
