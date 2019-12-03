@@ -15,19 +15,18 @@ fetch(url)
 	.then(res => res.json())
 	.then(res => {
 		//photo
-		if (res.media_type = "video"){
-		let video1 = document.createElement("iframe");
-			video1.setAttribute ("src", res.url);
-			video1.setAttribute ("class", "apod1");
-			video1.setAttribute ("height", "400px");
-			photoDiv1.appendChild(video1);
+		if (res.media_type = "image"){
+			let photo1 = document.createElement("IMG");
+				photo1.setAttribute ("src", res.hdurl);
+				photo1.setAttribute ("class", "apod1");
+				photoDiv1.appendChild(photo1);
 		} else {
-		let photo1 = document.createElement("IMG");
-			photo1.setAttribute ("src", res.hdurl);
-			photo1.setAttribute ("class", "apod1");
-			photoDiv1.appendChild(photo1);
+			let photo1 = document.createElement("IMG");
+				photo1.setAttribute ("src", "https://apod.nasa.gov/apod/image/1906/gendlerM83-New-HST-ESO-S1024.jpg");
+				photo1.setAttribute ("class", "apod1");
+				photoDiv1.appendChild(photo1);
 		}
-		//date
+		// date
 		let date = document.createElement("P");
 			date.setAttribute ("class", "date");
 			date.innerText = res.date;
@@ -44,20 +43,24 @@ fetch(url)
 		//modal
 		photo[i].addEventListener("click", function(evt){
 			evt.preventDefault();
-			console.log("photo clicked!");
 			modal.style.display = "block";
-			modalImg.src = res.url;
+			if (res.media_type = "image"){
+				modalImg.src = res.url;
+			} else {
+				modalImg.src = "https://apod.nasa.gov/apod/image/1906/gendlerM83-New-HST-ESO-S1024.jpg";
+			}
 		})
 	})
 	.catch(err => console.log("err", err))
 
 
 //close modal
-closeButton.addEventListener("click", function(evt){
+window.onclick = function(evt) {
 	evt.preventDefault();
-	console.log("clicked close")
-	modal.style.display = "none";
-});
+	if (evt.target == modalImg) {
+	  modal.style.display = "none";
+	}
+}
 
 //accordian
 accordian.addEventListener("click", function(evt){
