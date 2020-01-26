@@ -38,7 +38,7 @@ This website was created with HTML, CSS, Javascript, and information from the NA
 
 ### Getting Started
 
-This project includes a single webpage. The code can be examined in this GitHub repository. Click [here](https://shelbyvjacobs.github.io/ui-pattern/) to view the app.
+This project includes a single webpage. The code can be examined in this GitHub repository. Click [here](https://jolly-lichterman-f6cad4.netlify.com/) to view the app.
 
 ### Contribution Guidelines
 
